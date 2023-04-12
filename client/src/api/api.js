@@ -5,7 +5,7 @@ import axiosRetry from 'axios-retry';
 const cookies = new Cookies();
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: "https://droplet-39g3.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
@@ -42,7 +42,7 @@ api.interceptors.response.use(
 
         try {
           return axios.get("/auth/token", {
-            baseURL: process.env.REACT_APP_API_URL,
+            baseURL: "https://droplet-39g3.onrender.com",
             headers: {
               "Content-Type": "application/json",
             },
