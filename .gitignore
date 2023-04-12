@@ -2778,3 +2778,7 @@ server/node_modules/yallist/package.json
 server/node_modules/yallist/README.md
 server/node_modules/yallist/yallist.js
 server/.env
+.github/workflows/firebase-hosting-merge.yml
+.github/workflows/firebase-hosting-pull-request.yml
+server/.firebaserc
+server/firebase.json

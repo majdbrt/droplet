@@ -10,7 +10,7 @@ function SettingsPane() {
     const cookies = new Cookies();
 
     const api = axios.create({
-        baseURL: "http://localhost:3001/auth",
+        baseURL: process.env.REACT_APP_API_URL + "/auth",
         timeout: 1000,
         headers: {
             "content-type": "application/json",
