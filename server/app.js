@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 
 const corsOptions = ({
-    origin: process.env.FRONTEND_URL,
+    origin: "*",
     credentials: true
 });
 
@@ -32,7 +32,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
     cors: {
-      origin: process.env.FRONTEND_URL,
+      origin: "*",
       credentials: true
     }
   });
