@@ -33,7 +33,7 @@ function SignupForm() {
     const accessToken = localStorage.getItem("accessToken");
     const api = axios.create({
         baseURL: "https://droplet-39g3.onrender.com" + "/auth",
-        timeout: 1000,
+        timeout: 20000,
         headers: {
             "content-type": "application/json",
             "Authorization": `Bearer ${accessToken}`
