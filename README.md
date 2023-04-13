@@ -1,5 +1,6 @@
- <img src="https://user-images.githubusercontent.com/54665027/231650924-120fb0a5-baa2-4a41-9480-ad8fc95a6360.png" width="">
+ <img src="https://user-images.githubusercontent.com/54665027/231650924-120fb0a5-baa2-4a41-9480-ad8fc95a6360.png" width=""> 
 
+ [Link to live app](https://droplet-frontend.onrender.com/signup)
 <br>
 <table>
 <tr>
@@ -18,6 +19,9 @@
 
  **A real time chatting app built using the MERN stack and styled exclusivly with Tailwind**
  
+
+
+
 ## Key Features
 
 * Implemented secure token-based authenitcation using jsonwebtoken and bcrypt allowing users to stay logged in using a locally stored short-term access token and an HttpOnly refresh token cookie.
@@ -31,4 +35,4 @@
 ## App Overview
 
 
-<img src="https://user-images.githubusercontent.com/54665027/231654889-a84887c6-2790-48a1-8e39-9daeabc03f13.gif" width="1500">
+<img src="https://user-images.githubusercontent.com/54665027/231789207-b06c6a85-b79e-4ea3-b2f1-fd7d023953a5.gif" width="1500">
