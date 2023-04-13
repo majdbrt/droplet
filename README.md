@@ -1,5 +1,6 @@
-# droplet
+ <img src="https://user-images.githubusercontent.com/54665027/231650924-120fb0a5-baa2-4a41-9480-ad8fc95a6360.png" width="">
 
+<br>
 <table>
 <tr>
 <td valign="top"><img src="https://user-images.githubusercontent.com/54665027/231559480-cc8c4a98-5f8e-471c-a80f-4fcd01856bb5.png" width="50" > </td> 
@@ -12,7 +13,7 @@
 <td><img src="https://user-images.githubusercontent.com/54665027/231636186-3b8536b4-4018-4982-9fa6-3bdb0fb1c8de.png" width="50"> </td>
 </tr>
 </table>
-
+<br>
 
 
  **A real time chatting app built using the MERN stack and styled exclusivly with Tailwind**
@@ -25,6 +26,9 @@
 
 * Created a functional multi-page web application using React Router and managed the state with Redux.
 
-* Responsive design based on Tailwind's "mobile first" approach. 
+* Responsive design based on Tailwind's "mobile first" approach with dark mode compatibility. 
+
+## App Overview
 
 
+<img src="https://user-images.githubusercontent.com/54665027/231654889-a84887c6-2790-48a1-8e39-9daeabc03f13.gif" width="1500">
