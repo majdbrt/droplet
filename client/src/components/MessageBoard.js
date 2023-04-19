@@ -104,11 +104,11 @@ function MessageBoard() {
                 </div>
 
             </div>
-            <div ref={contactHeader} className={` bg-cyan-400 ${!selectedChat ? 'invisible' : ''} `}>
+            <div ref={contactHeader} className={`sticky bg-cyan-400 ${!selectedChat ? 'invisible' : ''} `}>
                 {darkTheme ? <img onClick={() => dispatch(setSelectedChat(null))} src={backImgWhite} alt="" className="absolute z-10 left-0 top-0  md:hidden h-7 px-3 my-4 " /> : <img onClick={() => dispatch(setSelectedChat(null))} src={backImgBlack} alt="" className="absolute z-10 left-0 top-0  md:hidden h-7 px-3 my-4 " />}
                 <p className={`sticky  py-3 font-bold  text-2xl w-full ${darkTheme ? 'text-white' : 'text-black'}  `}>{selectedChat?.participents?.[0].firstName} {selectedChat?.participents?.[0].lastName}</p>
             </div>
-            <div className={` h-[${messageBoardHeight}px] flex-1 overflow-y-auto flex flex-col  ${darkTheme ? 'bg-neutral-900' : 'bg-white'}   ${!selectedChat ? 'invisible' : ''} `}>
+            <div className={` sticky bottom-0 h-[${messageBoardHeight}px] flex-1 overflow-y-auto flex flex-col  ${darkTheme ? 'bg-neutral-900' : 'bg-white'}   ${!selectedChat ? 'invisible' : ''} `}>
 
                 {messagesList.map((message, index) => {
 
