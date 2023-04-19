@@ -35,7 +35,7 @@
 
 * Responsive design based on Tailwind's "mobile first" approach with dark mode compatibility. 
 
-## App Overview
+## App Overview (animated gifs)
 <img src="https://user-images.githubusercontent.com/54665027/233181770-9906082f-6aee-4d12-b2e9-cd9799202648.gif" width="1500">
 
 <img src="https://user-images.githubusercontent.com/54665027/231789207-b06c6a85-b79e-4ea3-b2f1-fd7d023953a5.gif" width="1500">
