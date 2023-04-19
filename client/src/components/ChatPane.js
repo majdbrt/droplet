@@ -76,7 +76,7 @@ function ChatPane() {
 
     return (
 
-        <aside className={` sticky overflow-y-hidden h-screen flex flex-col min-w-full  md:min-w-fit ${darkTheme ? 'bg-neutral-900' : 'bg-white '}  ${selectedChat ? 'hidden md:block' : ''} `}>
+        <aside className={` sticky overflow-y-hidden h-screen flex flex-col w-full  md:w-[40%] ${darkTheme ? 'bg-neutral-900' : 'bg-white '}  ${selectedChat ? 'hidden md:block' : ''} `}>
             <div className="md:max-h-[20%]">
                 <div  className={`${selectedChat ? 'hidden md:flex' : ''} flex sticky top-0 z-50 bg-neutral-900 border-cyan-400 w-full border-b-2 py-5 px-5 md:px-11 md:py-4 place-content-between`}>
                     <h1 className="font-bold self-center text-2xl md:text-2xl text-white">
