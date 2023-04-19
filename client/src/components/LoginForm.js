@@ -152,7 +152,7 @@ function LoginForm() {
                                 ...form,
                                 rememberMe: e.target.checked
                             });
-                        }} className="mr-2 ml-3 accent-cyan-400" />
+                        }} className="mr-2 ml-3 my-auto accent-cyan-400" />
                         <label htmlFor="rememberMe" className={`${darkTheme ? 'text-white' : 'text-black'} self-center`}>Remember me</label>
                     </div>
 
