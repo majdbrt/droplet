@@ -31,7 +31,7 @@ function Chats() {
 
 
     return (
-        <div className="flex ">
+        <div className="flex w-screen">
             <ChatPane />
             <MessageBoard />
         </div>
