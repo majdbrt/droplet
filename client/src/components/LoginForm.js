@@ -128,7 +128,7 @@ function LoginForm() {
     }// handleSubmit
 
     return (
-        <div className=" flex flex-col self-center my-auto items-center overflow-x-hidden  w-full  " >
+        <div className=" flex flex-col my-auto items-center overflow-x-hidden  w-full  " >
 
             <form className="  w-[80%] pt-3 pb-10 px-3 md:p-20 md:pt-3 md:pb-12 rounded-lg h-auto" onSubmit={handleSubmit}>
                 <div className="relative md:m-10  mb-0 md:mb-0 md:mt-5" >
