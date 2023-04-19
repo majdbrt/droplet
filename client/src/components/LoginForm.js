@@ -130,7 +130,7 @@ function LoginForm() {
     return (
         <div className=" flex flex-col my-auto items-center overflow-x-hidden  w-full  " >
 
-            <form className="  w-[80%] pt-3 pb-10 px-3 md:p-20 md:pt-3 md:pb-12 rounded-lg h-auto" onSubmit={handleSubmit}>
+            <form className="  w-[80%] md:w-fit pt-3 pb-10 px-3 md:p-20 md:pt-3 md:pb-12 rounded-lg h-auto" onSubmit={handleSubmit}>
                 <div className="relative md:m-10  mb-0 md:mb-0 md:mt-5" >
                     <input autoComplete="off" id="login-email" name="email" type="email" onChange={handleChange} onBlur={validateEmail} className={`block px-3  ${darkTheme ? ' text-white bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-800 ' : 'text-dark  hover:bg-neutral-50 focus:bg-neutral-50'} focus:outline-none border-solid appearance-none peer/email py-4 rounded-lg focus:border-cyan-400 hover:border-cyan-400 outline-none ${valid.email ? 'border-neutral-500' : 'border-rose-500'}  focus:outline border-2 w-full mx-auto md:w-96`} placeholder="" value={form.email} />
 
@@ -165,7 +165,7 @@ function LoginForm() {
             <hr className=" border-neutral-500 w-[80%] md:w-96 "></hr>
             <p className={` ${darkTheme ? 'text-white' : 'text-black'}  mt-10 mb-7 font-md text-xl`}>Don't have an account?</p>
 
-            <div className={`w-[80%] mb-10 ${darkTheme ? 'bg-neutral-900 hover:border-white' : 'bg-white  hover:border-black'} font-medium text-xl text-neutral-400 scale-90   hover:scale-95 border-2 border-neutral-500  rounded-full`}>
+            <div className={`w-[80%] md:w-fit mb-10 ${darkTheme ? 'bg-neutral-900 hover:border-white' : 'bg-white  hover:border-black'} font-medium text-xl text-neutral-400 scale-90   hover:scale-95 border-2 border-neutral-500  rounded-full`}>
                 <button className="cursor-default px-14  md:px-28 py-3 md:mx-2" type="button" onClick={()=>navigate("/signup")}>Sign up for droplet</button>
             </div>
         </div>
