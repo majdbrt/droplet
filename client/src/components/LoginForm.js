@@ -27,7 +27,7 @@ function LoginForm() {
     const darkTheme = useSelector((state) => state.user.darkTheme);
 
     const api = axios.create({
-        baseURL:"https://droplet-39g3.onrender.com" + "/auth",
+        baseURL:process.env.REACT_APP_API_URL + "/auth",
         headers: {
             "content-type": "application/json",
             "Authorization": `Bearer ${accessToken}`

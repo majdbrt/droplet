@@ -32,7 +32,7 @@ function SignupForm() {
     const darkTheme = useSelector((state) => state.user.darkTheme);
     const accessToken = localStorage.getItem("accessToken");
     const api = axios.create({
-        baseURL: "https://droplet-39g3.onrender.com" + "/auth",
+        baseURL: process.env.REACT_APP_API_URL + "/auth",
         headers: {
             "content-type": "application/json",
             "Authorization": `Bearer ${accessToken}`
