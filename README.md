@@ -1,6 +1,9 @@
  <img src="https://user-images.githubusercontent.com/54665027/231650924-120fb0a5-baa2-4a41-9480-ad8fc95a6360.png" width=""> 
 
- [Link to live app](https://droplet-frontend.onrender.com/signup)
+ [Link to live app](https://droplet-frontend.onrender.com/signup). The frontend and backend are hosted on Render.
+ 
+ 
+ <span style="color:red">Please note due to free-tier hosting, the app might be slow to load.</span>
 <br>
 <table>
 <tr>
@@ -33,6 +36,9 @@
 * Responsive design based on Tailwind's "mobile first" approach with dark mode compatibility. 
 
 ## App Overview
-
+<img src="https://user-images.githubusercontent.com/54665027/233181770-9906082f-6aee-4d12-b2e9-cd9799202648.gif" width="1500">
 
 <img src="https://user-images.githubusercontent.com/54665027/231789207-b06c6a85-b79e-4ea3-b2f1-fd7d023953a5.gif" width="1500">
+
+<img src="https://user-images.githubusercontent.com/54665027/233187296-0894b616-75e2-460e-855d-f4c7711d083a.gif" width="1500">
+
