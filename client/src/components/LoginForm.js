@@ -130,7 +130,7 @@ function LoginForm() {
     return (
         <div className="flex-1 flex flex-col items-center overflow-x-hidden h-full w-full " >
 
-            <form className=" mx-auto py-12  px-2 md:p-20 md:pt-14 md:pb-12 rounded-lg h-auto" onSubmit={handleSubmit}>
+            <form className=" flex-1 mx-auto py-12  px-2 md:p-20 md:pt-14 md:pb-12 rounded-lg h-auto" onSubmit={handleSubmit}>
                 <div className="relative md:m-10  mb-0 md:mb-0 md:mt-5" >
                     <input autoComplete="off" id="login-email" name="email" type="email" onChange={handleChange} onBlur={validateEmail} className={`block px-3  ${darkTheme ? ' text-white bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-800 ' : 'text-dark  hover:bg-neutral-50 focus:bg-neutral-50'} focus:outline-none border-solid appearance-none peer/email py-4 rounded-lg focus:border-cyan-400 hover:border-cyan-400 outline-none ${valid.email ? 'border-neutral-500' : 'border-rose-500'}  focus:outline border-2 w-[95%] mx-auto md:w-96`} placeholder="" value={form.email} />
 

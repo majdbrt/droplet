@@ -17,9 +17,6 @@ function ChatPane() {
         status: false,
         text: ""
     });
-    const [chatPaneHeight, setChatPaneHeight] = useState(0);
-    const header = useRef(null);
-    const contactForm = useRef(null);
 
     const dispatch = useDispatch();
 
@@ -43,7 +40,7 @@ function ChatPane() {
 
     useEffect(() => {
 
-        socket.on("refreshChatPane", (groups)=>{
+        socket.on("refreshChatPane", (groups) => {
 
             dispatch(setGroups(groups));
             const windowSize = {
@@ -57,18 +54,18 @@ function ChatPane() {
             setAddContact("");
         });
 
-        socket.on("exception",(error)=>{
+        socket.on("exception", (error) => {
             setError({
-                status:true,
-                text:error.message
+                status: true,
+                text: error.message
             });
 
-            setTimeout(()=>{
+            setTimeout(() => {
                 setError({
-                    status:false,
-                    text:""
+                    status: false,
+                    text: ""
                 });
-            },2000);
+            }, 2000);
         });
 
         return () => {
@@ -77,39 +74,33 @@ function ChatPane() {
         }
     }, [/*refresh*/]);
 
-
-    useEffect(()=>{
-        const headerHeight = header.current.clientHeight;
-        const contactFormHeight = contactForm.current.clientHeight;
-        console.log(window.innerHeight - (headerHeight+contactFormHeight))
-        setChatPaneHeight(window.innerHeight - (headerHeight+contactFormHeight))
-
-    },[header,contactForm])
-
     return (
 
-        <aside className={` overflow-y-hidden h-screen flex flex-col min-w-full  md:min-w-fit ${darkTheme ? 'bg-neutral-900' : 'bg-white '}  ${selectedChat ? 'hidden md:block' : ''} `}>
-            <div ref={header} className={`${selectedChat ? 'hidden md:flex' : ''} flex sticky top-0 z-50 bg-neutral-900 border-cyan-400 w-full border-b-2 py-5 px-5 md:px-11 md:py-4 place-content-between`}>
-                <h1 className="font-bold self-center text-2xl md:text-2xl text-white">
-                    <span className="text-cyan-400">drop</span>let
-                </h1>
+        <aside className={` sticky overflow-y-hidden h-screen flex flex-col min-w-full  md:min-w-fit ${darkTheme ? 'bg-neutral-900' : 'bg-white '}  ${selectedChat ? 'hidden md:block' : ''} `}>
+            <div ref={header} className="md:max-h-[20%]">
+                <div  className={`${selectedChat ? 'hidden md:flex' : ''} flex sticky top-0 z-50 bg-neutral-900 border-cyan-400 w-full border-b-2 py-5 px-5 md:px-11 md:py-4 place-content-between`}>
+                    <h1 className="font-bold self-center text-2xl md:text-2xl text-white">
+                        <span className="text-cyan-400">drop</span>let
+                    </h1>
 
-                <div onClick={handleClick} className="flex z-20 items-center md:hidden">
-                    <img src={gearIcon} alt="" className={`m-0 p-0 w-6 h-auto ${toggleMenu ? 'hidden' : ''}`} />
-                    <img src={gearSelectedIcon} alt="" className={` m-0 p-0 w-6 h-auto ${toggleMenu ? '' : 'hidden'}`} />
+                    <div onClick={handleClick} className="flex z-20 items-center md:hidden">
+                        <img src={gearIcon} alt="" className={`m-0 p-0 w-6 h-auto ${toggleMenu ? 'hidden' : ''}`} />
+                        <img src={gearSelectedIcon} alt="" className={` m-0 p-0 w-6 h-auto ${toggleMenu ? '' : 'hidden'}`} />
+                    </div>
                 </div>
+                <form onSubmit={handleSubmit}>
+                    <div className={`sticky flex flex-row mx-2 my-3 h-12 border-2 border-neutral-500 focus:border-cyan-400 hover:border-cyan-400 ${darkTheme ? 'bg-neutral-900 text-white focus:bg-neutral-700 hover:bg-neutral-800' : 'bg-white hover:bg-neutral-50 focus:bg-neutral-50'}`}>
+
+                        <input type="text" onChange={handleChange} className={`flex-1 border-0 pl-3 bg-transparent outline-none focus:border-0 appearance-none placeholder:text-neutral-500 `} value={addContact} placeholder="Add a contact" />
+                        <button type="submit">
+                            <img src={addImg} alt="" className={`h-8 w-8 flex-1  my-auto`} />
+                        </button>
+
+                    </div>
+                </form>
             </div>
-            <form ref={contactForm} onSubmit={handleSubmit}>
-                <div className={`flex flex-row mx-2 my-3 h-12 border-2 border-neutral-500 focus:border-cyan-400 hover:border-cyan-400 ${darkTheme ? 'bg-neutral-900 text-white focus:bg-neutral-700 hover:bg-neutral-800' : 'bg-white hover:bg-neutral-50 focus:bg-neutral-50'}`}>
 
-                    <input type="text" onChange={handleChange} className={`flex-1 border-0 pl-3 bg-transparent outline-none focus:border-0 appearance-none placeholder:text-neutral-500 `} value={addContact} placeholder="Add a contact" />
-                    <button type="submit">
-                        <img src={addImg} alt="" className={`h-8 w-8 flex-1  my-auto`} />
-                    </button>
-
-                </div>
-            </form>
-            <div className={` h-[${chatPaneHeight}px] overflow-y-auto`}>
+            <div className={` flex-1 h-[80%] overflow-y-auto`}>
                 {
                     groups.map((group) => {
                         return <ChatOverview key={group._id} group={group} />
@@ -121,8 +112,8 @@ function ChatPane() {
             <div className={`${!toggleMenu ? 'hidden' : ''}`}>
                 <SettingsPane />
             </div>
-            <div className={`absolute w-[90%] h-18 left-0 bottom-2 duration-500 ${!error.status? '-translate-x-full':''}`}>
-                <Error text={error.text}/>
+            <div className={`absolute w-[90%] h-18 left-0 bottom-2 duration-500 ${!error.status ? '-translate-x-full' : ''}`}>
+                <Error text={error.text} />
             </div>
         </aside>
     );
