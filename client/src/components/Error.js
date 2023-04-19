@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 function Error(props){
     const darkTheme = useSelector((state) => state.user.darkTheme);
     return(
-        <div className={`flex w-[90%] h-16 ${darkTheme? 'bg-neutral-700' : 'bg-neutral-100'}   text-rose-500 border-rose-500 border-2`}>
+        <div className={`flex w-[90%] h-16 ${darkTheme? 'bg-neutral-700' : 'bg-neutral-50'}   text-rose-500 border-rose-500 border-2`}>
             <img className="w-8 h-8 my-auto mx-3 " src={errorIcon} alt=""/>
             <p className="my-auto ">{props.text}</p>
         </div>
