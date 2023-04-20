@@ -29,7 +29,7 @@
 
 * Implemented secure token-based authentication using jsonwebtoken and bcrypt allowing users to stay logged in using a locally stored short-term access token and an HttpOnly refresh token cookie.
 
-* Developed a API to perform various CRUD operations to create, update and delete conversations between app users as well as real time chatting using MongoDB and Socket.IO.
+* Developed an API to perform various CRUD operations to create, update and delete conversations between app users as well as real time chatting using MongoDB and Socket.IO.
 
 * Created a functional multi-page web application using React Router and managed the state with Redux.
 
