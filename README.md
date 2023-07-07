@@ -31,7 +31,7 @@
 
 * Developed an API to perform various CRUD operations to create, update and delete conversations between app users as well as real time chatting using MongoDB and Socket.IO.
 
-* Created a functional multi-page web application using React Router and managed the state with Redux.
+* Created a functional single-page application using React Router and managed the state with Redux.
 
 * Responsive design based on Tailwind's "mobile first" approach with dark mode compatibility. 
 
